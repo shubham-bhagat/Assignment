@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Assigment</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<style>
+
+.styling
+{
+	margin-bottom: 50px;
+	border:1px solid ;
+	box-shadow: 6px 6px 2px 2px gray;
+	border-radius: 20px;
+}
+.col-sm-10:hover
+{
+	background-color:lightgray;
+}
+textarea
+{
+	border:2px dotted brown ;
+}
+</style>
+	
+</head>
+
+
+<script>
+const minute=""
+const minuteToSeconds = function()
+{
+	const value=document.getElementById("input1").value;
+	const mTos=parseInt(value)*60;
+	console.log(mTos)
+	 document.getElementById("ms").innerHTML = mTos;
+}
+
+</script>
+
+<script >
+	//var d="";
+	const divides=function(){
+		var num1=document.getElementById("num1").value;
+	var num2=document.getElementById("num2").value;
+	console.log(num1,num2);
+			var a=parseInt(num1);
+			var b=parseInt(num2);
+	 a%b=== 0 ?document.getElementById("divide").innerHTML="true":document.getElementById("divide").innerHTML="false"};
+
+</script>
+
+
+<script>
+
+const charCount=function()
+{
+	var num1=document.getElementById("c1").value;
+	var num2=document.getElementById("c2").value;
+	let count=0;
+	console.log(num1,num2);
+	for(let pos=0;pos<num2.length;pos++)
+	{
+		if(num2.charAt(pos)==num1)
+		{
+			count+=1;
+		}
+	}
+	console.log(count);
+	document.getElementById("counts").innerHTML=count;
+}
+
+</script>
+
+
+<script type="text/javascript">
+
+	
+const addUp=function()
+{
+	var num1=document.getElementById("num3").value;
+	var a=parseInt(num1);
+	console.log(a,typeof a);
+	var sum=0;
+	for(let i=1;i<=a;i++)
+	{
+		sum+=i;
+	}
+	console.log(sum);
+	document.getElementById("numAdd").innerHTML=sum;
+}
+
+</script>
+
+
+<script type="text/javascript">
+	
+	const replaceVowel=function()
+	{
+		var a=document.getElementById("sen").value;
+		var split=a.split('');
+		for(let i=0;i<split.length;i++)
+		{
+			if(split[i]==='a'){
+				split[i]='1';
+			}
+			else if(split[i]==='e')
+			{
+				split[i]='2';
+			}
+			else if(split[i]==='i')
+			{
+				split[i]='3';
+			}
+			else if(split[i]==='o')
+			{
+				split[i]='4';
+			}
+			else if(split[i]==='u')
+			{
+				split[i]='5';
+			}
+
+		}
+		var newstring=split.join('');
+		document.getElementById("rpV").innerHTML=newstring;
+console.log(newstring);
+		}
+</script>
+
+
+<script type="text/javascript">
+	
+	const reverseString=function()
+	{
+		var a=document.getElementById("str1").value;
+		var b=document.getElementById("str2").value;
+		console.log(a,b);
+		var split=a.split(" ");
+		
+		for(let i=0;i<split.length;i++)
+		{
+			if(split[i].charAt(0)===b)
+			{
+				split[i]=split[i].split("").reverse().join("");
+			}
+
+	}
+	var newsp=split.join(" ");
+	console.log(newsp);
+	document.getElementById("rev").innerHTML=newsp;
+}
+
+
+</script>
+
+
+<script type="text/javascript">
+	
+
+var array=["@", "@", "@", "@"];
+
+const testJackpot=function(array)
+{
+	console.log("the array is",array);
+	let count=0;
+	let length=array.length;
+	let value=array[0];
+	array.map(item=>item===value? count++: count--);
+	{count===length? document.getElementById("jack").innerHTML="true":document.getElementById("jack").innerHTML="false"};
+
+}
+
+</script>
+
+
+
+<script type="text/javascript">
+	var a=[1, 0, 1, 0];
+const removeDups=function(a)
+{
+	var ans= a.filter((value,index)=> a.indexOf(value)===index)
+  console.log(ans);
+  document.getElementById("dup").innerHTML=ans;
+}
+
+</script>
+
+<script type="text/javascript">
+	 
+	 var da=25;
+	 	const realType=function(da)
+	{
+		console.log(da);
+		var ApplyingFunction =Object.prototype.toString.call(da);
+		var RealValues=ApplyingFunction.split(' ')[1].slice(0, -1).toLowerCase();
+		 console.log(RealValues);
+		 document.getElementById("rt").innerHTML=RealValues;
+}
+
+	
+</script>
+
+
+
+<script type="text/javascript">
+	
+var ar=['13','shubh123','abc','shubham','bhag12at'];	
+
+const numInStr=function(ar)
+{
+	let newarr=[];
+	for(let i=0;i<ar.length;i++)
+	{
+		var str=ar[i].split('');
+		//console.log(str.length,str);
+			for(let j=0;j<str.length;j++)
+			{
+				if(!isNaN(str[j]))
+				{
+					newarr.push(str.join(''));
+					break;
+				}
+			}
+		
+	 	}
+	 	console.log(newarr);
+	 	document.getElementById("strNum").innerHTML=newarr;
+	 }
+
+
+
+</script>
+
+<body>
+
+
+<div class="jumbotron" >
+	<center><strong><b><u><p style="font-size: 80px;"> Javascript Questions</p></u></b></strong>
+		<i><p style="font-size: 50px;">Name:-Shubham Bhagat</p></center></i>i>
+</div>
+<div class="container">
+<marquee > <p style="color:brown;font-size:25px;"><b> Please go to console to pass values for some function whose input fields are not available</b></p></marquee>
+	<div class="row">
+<!-- <div style="border:1px solid black;text-align:center" class=" col-sm-10 styling"><br> class=" col-sm-10 styling">class=" col-sm-10 styling">class="col-sm-1"><br><h3>Code</h3>Answer</textarea></span> -->
+<div style="border:1px solid black;text-align:center" class=" col-sm-10 styling"><br>
+<span><input  style="width:190px" type="text" placeholder="Enter the minute"  id="input1"></input><span>
+<span><p style="background-color:gray;color:white;" id="ms"> Answer</p><span>
+<span><button type="button" class=" btn btn-primary" onclick="minuteToSeconds()">Minute To seconds</button></span>
+<br><textarea disabled style="height:250px;width: 450px">
+
+<!-- 
+const minute=""
+const minuteToSeconds = function()
+{
+	const value=document.getElementById("input1").value;
+	const mTos=parseInt(value)*60;
+	console.log(mTos)
+	 document.getElementById("ms").innerHTML = mTos;
+}
+ -->
+</textarea>
+</div>
+
+<div style="border:1px solid black;text-align: center" class="col-sm-10 styling"><br>
+<input style="width:60px" placeholder="a" type="text" id="num1"/><input style="width:60px" placeholder="b" type="text" id="num2"/>
+<p style="background-color:gray;color:white;" id="divide">Answer</p>
+<button type="button" class=" btn btn-primary" onclick="divides()">Divide Evenly</button>
+<br><textarea disabled style="height:250px;width: 450px">
+<!-- 
+	const divides=function(){
+		var num1=document.getElementById("num1").value;
+	var num2=document.getElementById("num2").value;
+	console.log(num1,num2);
+			var a=parseInt(num1);
+			var b=parseInt(num2);
+	 a%b=== 0 ?document.getElementById("divide").innerHTML="true":document.getElementById("divide").innerHTML="false"};
+ -->
+</textarea></div>
+
+<div style="border:1px solid black;text-align:center" class=" col-sm-10 styling"><br>
+<input type="text" id="c1"placeholder="Enter the Character" /><input  type="text" placeholder="Enter the word" id="c2"/>
+<p style="background-color:gray;color:white;" id="counts">Answer</p>
+<button type="button" class="btn btn-primary" onclick="charCount()">Character count</button>
+<br><textarea disabled style="height:250px;width: 450px">
+<!-- 	
+const charCount=function()
+{
+	var num1=document.getElementById("c1").value;
+	var num2=document.getElementById("c2").value;
+	let count=0;
+	console.log(num1,num2);
+	for(let pos=0;pos<num2.length;pos++)
+	{
+		if(num2.charAt(pos)==num1)
+		{
+			count+=1;
+		}
+	}
+	console.log(count);
+	document.getElementById("counts").innerHTML=count;
+}
+ -->
+</textarea></div>
+
+<div style="border:1px solid black;text-align:center" class=" col-sm-10 styling"><br>
+<input  style="width:190px"type="text" id="num3" placeholder="Enter the number" />
+<p style="background-color:gray;color:white;" id="numAdd">Answer</p>
+<button type="button" class="btn btn-primary" onclick="addUp()">Add the numbers</button>
+<br><textarea disabled style="height:250px;width: 450px">
+<!-- 	
+
+	
+const addUp=function()
+{
+	var num1=document.getElementById("num3").value;
+	var a=parseInt(num1);
+	console.log(a,typeof a);
+	var sum=0;
+	for(let i=1;i<=a;i++)
+	{
+		sum+=i;
+	}
+	console.log(sum);
+	document.getElementById("numAdd").innerHTML=sum;
+}
+
+
+ --></textarea></div>
+
+<div style="border:1px solid black;text-align:center" class=" col-sm-10 styling"><br>
+<input type="text" id="sen" style="width:160px" placeholder="Enter the word">
+<p style="background-color:gray;color:white;" id="rpV">Answer</p>
+<button type="button" class="btn btn-primary" onclick="replaceVowel()">Replace vowel</button><br><textarea disabled style="height:250px;width: 450px">
+<!-- 	
+
+	
+	const replaceVowel=function()
+	{
+		var a=document.getElementById("sen").value;
+		var split=a.split('');
+		for(let i=0;i<split.length;i++)
+		{
+			if(split[i]==='a'){
+				split[i]='1';
+			}
+			else if(split[i]==='e')
+			{
+				split[i]='2';
+			}
+			else if(split[i]==='i')
+			{
+				split[i]='3';
+			}
+			else if(split[i]==='o')
+			{
+				split[i]='4';
+			}
+			else if(split[i]==='u')
+			{
+				split[i]='5';
+			}
+
+		}
+		var newstring=split.join('');
+		document.getElementById("rpV").innerHTML=newstring;
+console.log(newstring);
+		}
+
+ -->	
+</textarea></div>
+</div>
+<br>
+
+
+<div class="row">
+<div style="border:1px solid black;text-align:center" class=" col-sm-10 styling"><br>
+<input type="text" id="str1" placeholder="Enter the string" /><input placeholder="Enter the Character" style="width:130px"type="text" id="str2"/>
+<p style="background-color:gray;color:white;" id="rev">Answer</p>
+<button type="button" class="btn btn-primary" onclick="reverseString()">Reverse String</button>
+<br><textarea disabled style="height:250px;width: 450px">
+<!-- 	
+
+	const reverseString=function()
+	{
+		var a=document.getElementById("str1").value;
+		var b=document.getElementById("str2").value;
+		console.log(a,b);
+		var split=a.split(" ");
+		
+		for(let i=0;i<split.length;i++)
+		{
+			if(split[i].charAt(0)===b)
+			{
+				split[i]=split[i].split("").reverse().join("");
+			}
+
+	}
+	var newsp=split.join(" ");
+	console.log(newsp);
+	document.getElementById("rev").innerHTML=newsp;
+}
+
+ -->	
+</textarea></div>
+
+<div style="border:1px solid black;text-align:center" class=" col-sm-10 styling"><br>
+<b><p>["abc", "abc", "abc", "abc"]</p>
+<p> To change please make array and pass to function testJackpot in console</b></p>
+<p style="background-color:gray;color:white;" id="jack">Answer</p>>
+<button type="button" class="btn btn-primary" onclick="testJackpot(array)">Hitting the Jackpot </button>
+<br><textarea disabled style="height:250px;width: 450px">
+<!-- 	
+
+var array=["@", "@", "@", "@"];
+
+const testJackpot=function(array)
+{
+	console.log("the array is",array);
+	let count=0;
+	let length=array.length;
+	let value=array[0];
+	array.map(item=>item===value? count++: count--);
+	{count===length? document.getElementById("jack").innerHTML="true":document.getElementById("jack").innerHTML="false"};
+
+}
+
+
+ -->	
+</textarea></div>
+
+<div style="border:1px solid black;text-align:center" class=" col-sm-10 styling"><br>
+<b><p>[1, 0, 1, 0]</p>
+<p> To change please make array and pass to function removeDups in console</b></p>
+<p style="background-color:gray;color:white;" id="dup">Answer</p>
+<button type="button" class="btn btn-primary" onclick="removeDups(a)">Remove Duplicate</button>
+<br><textarea disabled style="height:250px;width: 450px">
+	<!-- 
+	var a=[1, 0, 1, 0];
+const removeDups=function(a)
+{
+	var ans= a.filter((value,index)=> a.indexOf(value)===index)
+  console.log(ans);
+  document.getElementById("dup").innerHTML=ans;
+}
+
+
+	 -->
+</textarea></div>
+
+<div style="border:1px solid black;text-align:center" class=" col-sm-10 styling"><br>
+<b><p>Value =  25 </p>
+<p> To change please and pass  value to function realType() in console</b></p>
+<p style="background-color:gray;color:white;" id="rt">Answer</p>
+<button type="button" class="btn btn-primary" onclick="realType(da)">Get Real DataType</button>
+<br><textarea disabled style="height:250px;width: 450px">
+<!-- 	
+
+	 var da=25;
+	 	const realType=function(da)
+	{
+		console.log(da);
+		var ApplyingFunction =Object.prototype.toString.call(da);
+		var RealValues=ApplyingFunction.split(' ')[1].slice(0, -1).toLowerCase();
+		 console.log(RealValues);
+		 document.getElementById("rt").innerHTML=RealValues;
+}
+
+
+ -->	
+</textarea>
+</div>
+
+<div style="border:1px solid black;text-align:center" class=" col-sm-10 styling"><br>
+<b><p>Value = [' 13 ', ' shubh123 ', ' abc ' , ' shubham ' , ' bhag12at '] </p>
+<p> To change please and pass  value to function numInStr() in console</b></p>
+<p style="background-color:gray;color:white;" id="strNum">Answer</p>
+<button type="button" class="btn btn-primary" onclick="numInStr(ar)">Number in string</button>
+<br><textarea disabled style="height:250px;width: 450px">
+<!-- 	
+
+var ar=['13','shubh123','abc','shubham','bhag12at'];	
+
+const numInStr=function()
+{
+	let newarr=[];
+	for(let i=0;i<ar.length;i++)
+	{
+		var str=ar[i].split('');
+		//console.log(str.length,str);
+			for(let j=0;j<str.length;j++)
+			{
+				if(!isNaN(str[j]))
+				{
+					newarr.push(str.join(''));
+					break;
+				}
+			}
+		
+	 	}
+	 	console.log(newarr);
+	 }
+
+
+ -->	
+</textarea>
+</div>
+</div>
+</div>
+
+
+<footer style="background-color:gray;color:white;text-align: center" class="page-footer ">
+<h4> This page contain some basic javascript function </h4>
+<h4> Made by shubham Bhagat <span class="glyphicon glyphicon-heart-empty "></span></h4>
+
+</footer>
+
+
+	
+</body>
+</html>
